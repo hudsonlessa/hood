@@ -34,7 +34,7 @@
       <li><a href="#">Portfolio</a></li>
       <li><a href="#">Blog</a></li>
       <li><a href="#">Quem somos</a></li>
-      <li><button class="button--primary">Contate-nos</button>
+      <li><a href="#" class="button button--primary">Contate-nos</a></li>
     </ul>
   </nav>
 </header>
