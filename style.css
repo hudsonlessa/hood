@@ -48,6 +48,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin: 0;
 }
 
+body {
+  min-height: 100vh;
+}
+
 body, input, button {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
@@ -65,6 +69,8 @@ ul {
 /* Header styles */
 header {
   position: sticky;
+  z-index: 1;
+  top: 0;
   padding: 16px 16px;
   background: #333;
   color: #FFF;
@@ -80,11 +86,6 @@ header {
   .hamburger-menu {
     display: none;
   }
-}
-
-.hamburger-menu.front {
-  position: fixed;
-  z-index: 1;
 }
 
 .hamburger-menu span {
@@ -118,18 +119,19 @@ header nav img {
 
 .nav-links {
   position: fixed;
+  z-index: -1;
   top: 0;
   left: -100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  justify-content: center;
   background: #333;
   text-align: center;
   text-transform: uppercase;
-  transition: .2s;
   font-size: 32px;
+  transition: .2s;
 }
 
 @media (min-width: 768px) {
@@ -162,7 +164,7 @@ header nav img {
 
 /* Button styles */
 .button {
-  display: block;
+  display: inline-block;
   padding: 16px 32px;
   font-weight: 700;
   text-align: center;
@@ -206,6 +208,7 @@ section.padded {
 
 section.hero {
   position: relative;
+  min-height: 520px;
   color: #FFF;
 }
 
@@ -236,12 +239,13 @@ section.hero .container--title {
 }
 
 section.hero .website-title {
+  display: inline-block;
   font-size: 64px;
   font-weight: 900;
   text-transform: uppercase;
   line-height: 1;
 
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-color--dark));
+  background: linear-gradient(-45deg, var(--primary-color), var(--primary-color--light));
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -283,3 +287,62 @@ section.hero .container--buttons {
   }
 }
 
+.banner {
+  position: relative;
+  padding: 64px 16px;
+  width: 100%;
+  color: #FFF;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.banner > img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner__text {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.banner__buttons {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .banner__buttons {
+    display: flex;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
+.banner__buttons a + a {
+  display: block;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .banner__buttons a + a {
+    margin-top: 0;
+    margin-left: 24px;
+  }
+}
+
+img[alt="Disponível no Google Play"] {
+  width: 196px;
+  margin: -12px;
+  margin-bottom : -16px;
+}

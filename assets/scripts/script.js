@@ -4,6 +4,5 @@ window.onload = () => {
 
   hamburgerMenu.addEventListener('click', () => {
     navLinks.classList.toggle('visible');
-    hamburgerMenu.classList.toggle('front');
   });
 };
