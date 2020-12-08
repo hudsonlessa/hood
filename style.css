@@ -16,21 +16,27 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 @font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Regular.ttf");
+  font-family: "Radical Brush DEMO";
+  src: url("assets/fonts/Radical Brush DEMO.otf");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Bold.ttf");
-  font-weight: 700;
+  src: url("assets/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
 }
 
 @font-face {
   font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-Black.ttf");
-  font-weight: 900;
+  src: url("assets/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("assets/fonts/Lora-Regular.ttf");
+  font-weight: 400;
 }
 
 /* Global styles */
@@ -50,6 +56,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 body {
   min-height: 100vh;
+  background: #111;
+  color: #FFF;
+  line-height: 1.5;
 }
 
 body, input, button {
@@ -64,6 +73,23 @@ a {
 
 ul {
   list-style: none;
+}
+
+li {
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  transition: .2s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.red {
+  color: var(--primary-color);
 }
 
 /* Header styles */
@@ -106,7 +132,7 @@ header nav img {
 @media (min-width: 768px) {
   header nav img {
     display: unset;
-    position: relative;
+    height: 50px;
   }
 }
 
@@ -162,6 +188,14 @@ header nav img {
   }
 }
 
+/* Footer styles */
+footer {
+  display: block;
+  width: 100%;
+  height: 64px;
+  background: #333;
+}
+
 /* Button styles */
 .button {
   display: inline-block;
@@ -170,11 +204,13 @@ header nav img {
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .button--primary {
   background: var(--primary-color);
   color: #FFF;
+  transition: .2s;
 }
 
 .button--primary:hover {
@@ -189,6 +225,16 @@ header nav img {
   border: 1px solid #FFF;
   background: transparent;
   color: #FFF;
+  transition: .2s;
+}
+
+.button--ghost:hover {
+  background: #FFF;
+  color: #000;
+}
+
+.button--ghost:hover {
+  filter: brightness(90%);
 }
 
 /* Main styles */
@@ -234,34 +280,23 @@ section.hero img {
   opacity: .1;
 }
 
-section.hero .container--title {
-  margin: 0 16px;
-}
+section.hero .container--title {margin: 0 16px}
 
 section.hero .website-title {
   display: inline-block;
   font-size: 64px;
-  font-weight: 900;
   text-transform: uppercase;
   line-height: 1;
-
-  background: linear-gradient(-45deg, var(--primary-color), var(--primary-color--light));
-  background-clip: text;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  font-family: "Radical Brush DEMO", "Roboto", sans-serif;
 }
 
 @media (min-width: 768px) {
   section.hero .website-title {
-    font-size: 72px;
+    font-size: 96px;
   }
 }
 
-section.hero .website-description {
-  font-size: 24px;
-}
+section.hero .website-description {font-size: 24px}
 
 
 section.hero .container--buttons {
@@ -276,9 +311,7 @@ section.hero .container--buttons {
   }
 }
 
-.container--buttons .button + .button {
-  margin-top: 24px
-}
+.container--buttons .button + .button {margin-top: 24px}
 
 @media (min-width: 768px) {
   .container--buttons .button + .button {
@@ -315,6 +348,7 @@ section.hero .container--buttons {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 32px;
+  text-shadow: 0 0 5px #000;
 }
 
 .banner__buttons {
@@ -345,4 +379,110 @@ img[alt="Disponível no Google Play"] {
   width: 196px;
   margin: -12px;
   margin-bottom : -16px;
+}
+
+.section__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Radical Brush DEMO", "Roboto", sans-serif;
+  font-size: 48px;
+  margin-bottom: 64px;
+}
+
+@media (min-width: 768px) {
+  .section__title {
+    font-size: 96px;
+  }
+}
+
+section.services ul {
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  section.services ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+section.services img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service__description {
+  padding: 64px 16px;
+  min-height: 300px;
+}
+
+@media (min-width: 768px) {
+  section.services li:nth-child(3) {
+    order: 4;
+  }
+  section.services li:nth-child(4) {
+    order: 3;
+  }
+}
+
+.service__description h1 {
+  font-size: 32px;
+}
+
+.service__description p {
+  margin-top: 24px;
+  font-family: "Lora", serif;
+}
+
+@media (min-width: 768px) {
+  .service__description p {
+    font-size: 24px;
+  }
+}
+
+.service__container--buttons {
+  display: inline-flex;
+  margin-top: 24px;
+  flex-direction: column;
+}
+
+.service__container--buttons .button + .button {
+  margin-top: 24px;
+}
+
+section.projects {
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  section.projects ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 1fr));
+  }
+}
+
+section.projects img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.clients ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+@media (min-width: 768px) {
+  section.clients ul {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+section.clients ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

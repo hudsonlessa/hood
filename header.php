@@ -28,7 +28,7 @@
       <span></span>
     </div>
 
-    <img src="#" alt="Hood Studios logo">
+    <img src="<?php echo site_url(); ?>/wp-content/themes/hood/assets/images/logo.png" alt="Hood Studios logo">
 
     <ul class="nav-links">
       <li><a href="#">Portfolio</a></li>
