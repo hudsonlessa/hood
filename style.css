@@ -350,14 +350,12 @@ img[alt="Disponível no Google Play"] {
   margin-bottom: 64px;
   font-family: "Radical Brush DEMO", "Roboto", sans-serif;
   font-size: 36px;
+  text-align: center;
   text-transform: uppercase;
 }
 
 @media (min-width: 480px) {
-  .section__title {
-    font-size: 72px;
-    text-align: center;
-  }
+  .section__title {font-size: 72px}
 }
 
 @media (min-width: 768px) {
