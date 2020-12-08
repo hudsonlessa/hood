@@ -71,26 +71,17 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style: none;
-}
+ul {list-style: none}
 
-li {
-  overflow: hidden;
-}
+li {overflow: hidden}
 
-img {
-  display: block;
-  transition: .2s;
-}
+img {display: block}
 
-img:hover {
-  transform: scale(1.05);
-}
+li img {transition: .2s}
 
-.red {
-  color: var(--primary-color);
-}
+li img:hover {transform: scale(1.05)}
+
+.red {color: var(--primary-color)}
 
 /* Header styles */
 header {
@@ -103,15 +94,20 @@ header {
   font-weight: 700;
 }
 
+@media (min-width: 768px) {
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .hamburger-menu {
   display: inline-block;
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
-  .hamburger-menu {
-    display: none;
-  }
+  .hamburger-menu {display: none}
 }
 
 .hamburger-menu span {
@@ -121,26 +117,19 @@ header {
   background: #FFF;
 }
 
-.hamburger-menu span + span {
-  margin-top: 8px;
-}
+.hamburger-menu span + span {margin-top: 8px}
 
-header nav img {
-  display: none;
-}
+header nav .logo {display: none}
 
 @media (min-width: 768px) {
-  header nav img {
+  header nav .logo {
     display: unset;
     height: 50px;
   }
 }
 
 @media (min-width: 768px) {
-  header nav {
-    display: flex;
-    align-items: center;
-  }
+  header nav .logo img {height: 100%}
 }
 
 .nav-links {
@@ -173,13 +162,9 @@ header nav img {
   }
 }
 
-.nav-links.visible {
-  left: 0;
-}
+.nav-links.visible {left: 0}
 
-.nav-links li + li {
-  margin-top: 32px;
-}
+.nav-links li + li {margin-top: 32px}
 
 @media (min-width: 768px) {
   .nav-links li + li {
@@ -213,13 +198,9 @@ footer {
   transition: .2s;
 }
 
-.button--primary:hover {
-  filter: brightness(110%);
-}
+.button--primary:hover {filter: brightness(110%)}
 
-.button--primary:active {
-  filter: brightness(90%);
-}
+.button--primary:active {filter: brightness(90%)}
 
 .button--ghost {
   border: 1px solid #FFF;
@@ -233,24 +214,16 @@ footer {
   color: #000;
 }
 
-.button--ghost:hover {
-  filter: brightness(90%);
-}
+.button--ghost:active {filter: brightness(90%)}
 
 /* Main styles */
-section {
-  padding: 64px 0;
-}
+section {padding: 64px 0}
 
 @media (min-width: 768px) {
-  section {
-    padding: 128px 0;
-  }
+  section {padding: 128px 0}
 }
 
-section.padded {
-  padding: 128px 16px;
-}
+section.padded {padding: 128px 16px}
 
 section.hero {
   position: relative;
@@ -346,9 +319,7 @@ section.hero .container--buttons {
   text-shadow: 0 0 5px #000;
 }
 
-.banner__buttons {
-  margin-top: 24px;
-}
+.banner__buttons {margin-top: 24px}
 
 @media (min-width: 768px) {
   .banner__buttons {
@@ -419,17 +390,12 @@ section.services img {
 }
 
 @media (min-width: 768px) {
-  section.services li:nth-child(3) {
-    order: 4;
-  }
-  section.services li:nth-child(4) {
-    order: 3;
-  }
+  section.services li:nth-child(3) {order: 4}
+
+  section.services li:nth-child(4) {order: 3}
 }
 
-.service__description h1 {
-  font-size: 32px;
-}
+.service__description h1 {font-size: 32px}
 
 .service__description p {
   margin-top: 24px;
@@ -437,9 +403,7 @@ section.services img {
 }
 
 @media (min-width: 768px) {
-  .service__description p {
-    font-size: 24px;
-  }
+  .service__description p {font-size: 24px}
 }
 
 .service__container--buttons {
@@ -448,22 +412,16 @@ section.services img {
   flex-direction: column;
 }
 
-.service__container--buttons .button + .button {
-  margin-top: 24px;
-}
+.service__container--buttons .button + .button {margin-top: 24px}
 
 section.projects ul {
   display: flex;
   flex-wrap: wrap;
 }
 
-section.projects ul li {
-  flex: 1 1 480px;
-}
+section.projects ul li {flex: 1 1 420px}
 
-section.projects ul li {
-  height: 480px;
-}
+section.projects ul li {height: 420px}
 
 section.projects img {
   display: block;
@@ -478,9 +436,7 @@ section.clients ul {
   flex-wrap: wrap;
 }
 
-section.clients ul li {
-  flex: 1 1 320px;
-}
+section.clients ul li {flex: 1 1 320px}
 
 section.clients ul li img {
   display: block;
