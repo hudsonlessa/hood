@@ -349,13 +349,15 @@ img[alt="Disponível no Google Play"] {
   padding: 0 16px;
   margin-bottom: 64px;
   font-family: "Radical Brush DEMO", "Roboto", sans-serif;
-  font-size: 32px;
-  text-align: center;
+  font-size: 36px;
   text-transform: uppercase;
 }
 
 @media (min-width: 480px) {
-  .section__title {font-size: 72px}
+  .section__title {
+    font-size: 72px;
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
