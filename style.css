@@ -291,13 +291,10 @@ section.hero .website-title {
 }
 
 @media (min-width: 768px) {
-  section.hero .website-title {
-    font-size: 96px;
-  }
+  section.hero .website-title {font-size: 96px}
 }
 
 section.hero .website-description {font-size: 24px}
-
 
 section.hero .container--buttons {
   margin: 24px 16px 0;
@@ -306,9 +303,7 @@ section.hero .container--buttons {
 }
 
 @media (min-width: 768px) {
-  section.hero .container--buttons {
-    flex-direction: row;
-  }
+  section.hero .container--buttons {flex-direction: row}
 }
 
 .container--buttons .button + .button {margin-top: 24px}
@@ -382,22 +377,28 @@ img[alt="Disponível no Google Play"] {
 }
 
 .section__title {
-  text-align: center;
-  text-transform: uppercase;
+  margin-bottom: 64px;
   font-family: "Radical Brush DEMO", "Roboto", sans-serif;
   font-size: 32px;
-  margin-bottom: 64px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@media (min-width: 480px) {
+  .section__title {font-size: 72px}
 }
 
 @media (min-width: 768px) {
-  .section__title {
-    font-size: 96px;
-  }
+  .section__title {font-size: 96px}
 }
 
-section.services ul {
-  color: #fff;
+section.services {padding-bottom: 0}
+
+@media (min-width: 768px) {
+  section.services {padding-bottom: 128px}
 }
+
+section.services ul {color: #fff}
 
 @media (min-width: 768px) {
   section.services ul {
@@ -451,15 +452,17 @@ section.services img {
   margin-top: 24px;
 }
 
-section.projects {
-  padding-bottom: 0;
+section.projects ul {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
-  section.projects ul {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-  }
+section.projects ul li {
+  flex: 1 1 480px;
+}
+
+section.projects ul li {
+  height: 480px;
 }
 
 section.projects img {
@@ -470,14 +473,13 @@ section.projects img {
 }
 
 section.clients ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-@media (min-width: 768px) {
-  section.clients ul {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  }
+section.clients ul li {
+  flex: 1 1 320px;
 }
 
 section.clients ul li img {
