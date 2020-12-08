@@ -88,7 +88,7 @@ header {
   position: sticky;
   z-index: 1;
   top: 0;
-  padding: 16px 16px;
+  padding: 16px;
   background: #333;
   color: #FFF;
   font-weight: 700;
@@ -223,8 +223,6 @@ section {padding: 64px 0}
   section {padding: 128px 0}
 }
 
-section.padded {padding: 128px 16px}
-
 section.hero {
   position: relative;
   min-height: 520px;
@@ -348,6 +346,7 @@ img[alt="Disponível no Google Play"] {
 }
 
 .section__title {
+  padding: 0 16px;
   margin-bottom: 64px;
   font-family: "Radical Brush DEMO", "Roboto", sans-serif;
   font-size: 32px;
